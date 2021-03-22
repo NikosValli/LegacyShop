@@ -7,7 +7,7 @@ import {fetchCollectionsStart} from '../../redux/shop/shop.actions';
 import {selectIsCollectionFetching} from '../../redux/shop/shop.selectors';
 
 
-const ShopPage=({fetchCollectionsStart,match}) => {
+const ShopPage=({fetchCollectionsStart,match}) => { 
 useEffect(()=>{
 
     fetchCollectionsStart();
