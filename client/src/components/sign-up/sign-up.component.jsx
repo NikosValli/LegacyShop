@@ -22,9 +22,15 @@ const handleSubmit=async event => {
     
 
     if (password != confirmPassword){
-        alert("Passwords dont match");
+        alert("Passwords don't match..!");
         return;
     }
+
+    if (password.length<6){
+        alert("Your password needs to be at least 6 characters!");
+        return;
+    }
+
 
     signUpStart({displayName,email,password});
 

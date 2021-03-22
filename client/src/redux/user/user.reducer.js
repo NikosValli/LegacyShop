@@ -2,6 +2,7 @@ import UserActionTypes from './user.types';
 
 const INITIAL_STATE={
 currentUser:null,
+displayName:null,
 error:null
 
 }
@@ -11,13 +12,15 @@ switch(action.type){
         return{
            ...state,
            currentUser:action.payload,
+           displayName:action.payload.displayName,
              error:null
-        };
+        }
         case UserActionTypes.SIGN_OUT_SUCCESS:
           return{
 
             ...state,
             currentUser:null,
+            displayName:null,
             error:null
           }
 
@@ -26,7 +29,7 @@ switch(action.type){
         case UserActionTypes.SIGN_UP_FAILURE:
             return {
                 ...state,
-              error:action.payload
+              error:action.payload,
             }
 
     default:

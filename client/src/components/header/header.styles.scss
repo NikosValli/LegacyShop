@@ -23,5 +23,33 @@
         cursor: pointer;
       }
     }
+
+  
+  }
+
+  div{
+    position: relative;
+  }
+  .js-nametag{
+    position: relative;
+    font-weight: bold;
+  }
+  .js-nametag:nth-child(1){
+    animation-name: fade;
+    animation-fill-mode: both;
+    animation-iteration-count: 1;
+    animation-duration: 10s;
+    animation-direction: alternate-reverse;  
+  }
+
+  
+  
+  @keyframes fade{
+      0%,50% {
+        opacity: 0;
+  }
+      100%{
+        opacity: 1;
+    }
   }
   
